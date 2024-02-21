@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>Embedded Content Example</title>
+</head>
+<body>
+  <h2>Embedding Content with iframe</h2>
+  <p>Below is an embedded webpage:</p>
+  <!-- <iframe src="https://www.abs.com" height="500px" width="700px"></iframe> -->
+ 
+    <svg width="400" height="200">
+        <!-- <circle cx="100" cy="100" r="50" fill="red" /> -->
+      <rect x="50" y="50" width="100" height="100" fill="blue" />
+        <line x1="20" y1="20" x2="180" y2="180" stroke="green" stroke-width="2" />
+    </svg>
+     <canvas id="myCanvas" width="200" height="200"></canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "red";
+        ctx.beginPath();
+        ctx.arc(100, 100, 50, 0, Math.PI * 2);
+        ctx.fill();
+        
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 50, 100, 100);
+        
+        ctx.strokeStyle = "green";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(20, 20);
+        ctx.lineTo(180, 180);
+        ctx.stroke();
+    </script>
+    <div class="box" id="right"></div>
+    <div class="box" id="right"></div>
+    <div class="box" id="right"></div>
+    <div class="box" id="right"></div>
+    <div class="box" id="right"></div>
+</body>
+</html>
